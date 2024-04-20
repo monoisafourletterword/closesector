@@ -66,7 +66,8 @@
 | 3.                    | Система предоставляет игроку возможность повторить выбор корректных номеров. |
 
 **Прецедент "Закрыть номера на доске"**
-![Uploading mermaid-diagram-2024-04-20-163647.png…]()
+![mermaid-diagram-2024-04-20-163647](https://github.com/monoisafourletterword/closesector/assets/107469981/2cb581ac-5fd3-4a96-b912-7880b547a4bf)
+
 
 **Основной сценарий**
 
