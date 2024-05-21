@@ -1,10 +1,40 @@
 # Лабораторная работа №5: Диаграмма классов проектирования
-[![](https://mermaid.ink/img/pako:eNqFVM1OGzEQfhXLp9AmSFz30ANJhTg0VElPsD242SGs6h1H_hEgFAnooT310Deo-gIItRUCiWfwvhFjO4T8bIQPu_aMv_lmvrF9wUeqAJ7xkRTG9Eox1qLKkdGIFvZRinPQ7CLZwuiwodUljhmKCpJ5muMiZo8cy4gSLRuTte-qL6BXPZPI0VUObQNNwO33GhyaAMWi5y15hLZ9OA0ZtFLYPk3bDCPxwXEqx2wtgt5j0XVaA9oAG4IxpcLW0pauQluig9f2DU9U5B6AcdKa1vhlvtUo1SDUsK5VLG1drFT40WemY8wGTYwV1pnXxFpJ4pPTuJ6DJeumFKJzWfqBkrJXjmBFOKkM7KozMAe4q4QuWpt0kLJBhrUykzhSLiY2DxXPXc53cs46nXdhtr39hhap6Rnzf-rv_sbf1lf1NX2_-X_1dULOTnkDNmhDyN_-0d_S_sv6B0WY4zYxxrYmWCR79HfPkNTxzUy__L1_qH_GTOc8sUONPFLOsvsbsvP_ExFv8wp0JcqCrnaUNef2BOi-8oymhdBfc57jlPYJZ9XwHEc8s9pBm7tJISzMXgKeHQtpyDoReKjUyxqK0ir9YfZ2hN_0CRp9aRI?type=png)](https://mermaid.live/edit#pako:eNqFVM1OGzEQfhXLp9AmSFz30ANJhTg0VElPsD242SGs6h1H_hEgFAnooT310Deo-gIItRUCiWfwvhFjO4T8bIQPu_aMv_lmvrF9wUeqAJ7xkRTG9Eox1qLKkdGIFvZRinPQ7CLZwuiwodUljhmKCpJ5muMiZo8cy4gSLRuTte-qL6BXPZPI0VUObQNNwO33GhyaAMWi5y15hLZ9OA0ZtFLYPk3bDCPxwXEqx2wtgt5j0XVaA9oAG4IxpcLW0pauQluig9f2DU9U5B6AcdKa1vhlvtUo1SDUsK5VLG1drFT40WemY8wGTYwV1pnXxFpJ4pPTuJ6DJeumFKJzWfqBkrJXjmBFOKkM7KozMAe4q4QuWpt0kLJBhrUykzhSLiY2DxXPXc53cs46nXdhtr39hhap6Rnzf-rv_sbf1lf1NX2_-X_1dULOTnkDNmhDyN_-0d_S_sv6B0WY4zYxxrYmWCR79HfPkNTxzUy__L1_qH_GTOc8sUONPFLOsvsbsvP_ExFv8wp0JcqCrnaUNef2BOi-8oymhdBfc57jlPYJZ9XwHEc8s9pBm7tJISzMXgKeHQtpyDoReKjUyxqK0ir9YfZ2hN_0CRp9aRI)
+![lab5 (1)](https://github.com/monoisafourletterword/closesector/assets/107469981/0275e7bf-e2bf-41ee-95aa-8c729ecd470c)
 
 
-## Описание классов
-Игрок (Player) - Представляет участника игры.
-Игра (Game) - Представляет игровую сессию.
-Раунд (Round) - Представляет один раунд в рамках игры.
-Ход (Turn) - Представляет один ход игрока в рамках раунда.
-Бросок (Roll) - Представляет результат броска костей.
+### Описание классов и методов
+
+1.  Игрок (Player):
+
+    -   Атрибуты:
+        -   Имя: String - представляет имя игрока.
+2.  Игра (Game):
+
+    -   Атрибуты:
+        -   PlayerCount: int - количество игроков в игре.
+        -   ID игры: String - уникальный идентификатор игры, генерируется автоматически.
+    -   Методы:
+        -   `StartNewGame(playerName, numberOfPlayers)`: Начать новую игру с заданным именем игрока и количеством игроков.
+        -   `EndCurrentGameSession()`: Завершить текущую игровую сессию.
+        -   `ContinueCurrentGameSession()`: Продолжить текущую игровую сессию.
+        -   `ShowGameResults(gameResults)`: Показать результаты игры.
+3.  Раунд (Round):
+
+    -   Атрибуты:
+        -   Result: String[] - массив результатов раунда.
+        -   Status: String - текущий статус раунда (например, "активен" или "завершен").
+        -   ID раунда: int  - уникальный идентификатор раунда.
+     
+4.  Ход (Turn):
+
+    -   Атрибуты:
+        -   ID хода: int - уникальный идентификатор хода.
+    -   Методы:
+        -   `RollDice()`: Выполнить бросок костей.
+        -   `CloseBoxesOnBoard()`: Закрыть номера на доске на основе результатов броска.
+     
+5.  Бросок (Roll):
+
+    -   Атрибуты:
+        -   Result: int - результат броска (например, сумма значений на игральных костях).
+        -   RollNumber: int - порядковый номер броска в рамках хода.
