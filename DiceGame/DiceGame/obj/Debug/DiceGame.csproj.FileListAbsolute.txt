@@ -1,0 +1,11 @@
+C:\Users\user\source\repos\DiceGame\DiceGame\obj\Debug\DiceGame.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\DiceGame\DiceGame\obj\Debug\DiceGame.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\source\repos\DiceGame\DiceGame\obj\Debug\DiceGame.Properties.Resources.resources
+C:\Users\user\source\repos\DiceGame\DiceGame\obj\Debug\DiceGame.csproj.GenerateResource.cache
+C:\Users\user\source\repos\DiceGame\DiceGame\obj\Debug\DiceGame.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\DiceGame\DiceGame\bin\Debug\DiceGame.exe.config
+C:\Users\user\source\repos\DiceGame\DiceGame\bin\Debug\DiceGame.exe
+C:\Users\user\source\repos\DiceGame\DiceGame\bin\Debug\DiceGame.pdb
+C:\Users\user\source\repos\DiceGame\DiceGame\obj\Debug\DiceGame.exe
+C:\Users\user\source\repos\DiceGame\DiceGame\obj\Debug\DiceGame.pdb
+C:\Users\user\source\repos\DiceGame\DiceGame\obj\Debug\DiceGame.DiceGameForm.resources
