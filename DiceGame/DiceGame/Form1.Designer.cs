@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System;
 using System.Windows.Forms;
 
 namespace DiceGame
 {
-    partial class Form1
+    partial class DiceGameForm
     {
         private System.ComponentModel.IContainer components = null;
         private Button btnStartGame;
@@ -199,7 +199,7 @@ namespace DiceGame
             this.lblRolledSum.TabIndex = 12;
             this.lblRolledSum.Text = "Сумма броска:";
             // 
-            // Form1
+            // DiceGameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -218,7 +218,7 @@ namespace DiceGame
             this.Controls.Add(this.btnEndGame);
             this.Controls.Add(this.btnRollDice);
             this.Controls.Add(this.btnStartGame);
-            this.Name = "Form1";
+            this.Name = "DiceGameForm";
             this.Text = "Игра в кости";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPlayers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSector1)).EndInit();
