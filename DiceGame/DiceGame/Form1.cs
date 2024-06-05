@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -6,23 +6,24 @@ using System.Windows.Forms;
 
 namespace DiceGame
 {
-    public partial class Form1 : Form
+    public partial class DiceGameForm : Form
     {
         private Game game;
         private int currentPlayerIndex = 0;
         private List<TextBox> playerNameTextBoxes = new List<TextBox>();
 
-        public Form1()
+        public DiceGameForm()
         {
             InitializeComponent();
 
-            
+            // Добавление изображения на кнопку "Бросить кости"
             btnRollDice.Image = Image.FromFile("C:\\Users\\user\\Documents\\dice.png");
             btnRollDice.ImageAlign = ContentAlignment.MiddleLeft;
             btnRollDice.TextAlign = ContentAlignment.MiddleRight;
 
+            // Настройка размеров изображения
             btnRollDice.Size = new Size(120, 40);
-            btnRollDice.Image = new Bitmap(btnRollDice.Image, new Size(32, 32));
+            btnRollDice.Image = new Bitmap(btnRollDice.Image, new Size(32, 32)); // Изменение размера изображения до 32x32 пикселей
         }
 
         private void btnStartGame_Click(object sender, EventArgs e)
@@ -30,6 +31,7 @@ namespace DiceGame
             int numberOfPlayers = (int)numericUpDownPlayers.Value;
             playerNameTextBoxes.Clear();
 
+            // Создание диалогового окна для ввода имен игроков
             Form nameInputForm = new Form
             {
                 Text = "Введите имена игроков",
@@ -100,15 +102,24 @@ namespace DiceGame
                     MessageBox.Show("Нет доступных секторов для закрытия. Конец хода.");
                     EndTurn();
                 }
+                else
+                {
+                    // Auto close sectors for more dynamic gameplay
+                    var sectorsToClose = game.AvailableSectors.Where(s => s < roll.Result).ToList();
+                    if (sectorsToClose.Count >= 2)
+                    {
+                        int sector1 = sectorsToClose[0];
+                        int sector2 = sectorsToClose[1];
+                        game.CloseSectors(sector1, sector2);
+                        UpdateSectors();
+                    }
+                }
             }
             else
             {
                 MessageBox.Show("Пожалуйста, начните игру.");
             }
         }
-
-
-
 
         private void btnEndGame_Click(object sender, EventArgs e)
         {
@@ -152,7 +163,6 @@ namespace DiceGame
                 MessageBox.Show("Пожалуйста, начните игру.");
             }
         }
-
 
         private void EndTurn()
         {
